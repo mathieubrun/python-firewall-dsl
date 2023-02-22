@@ -13,4 +13,5 @@ for f in glob("./**/rules.py", recursive=True):
 for fw in shared.firewalls.fw:
     print(f"rules for {fw.name}")
     for r in fw.rules:
+        print(r.name)
         print(asdict(r))

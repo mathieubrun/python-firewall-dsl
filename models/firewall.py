@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Optional
+
+from models.rule import Rule
 
 @dataclass
 class Firewall:
     name: str
-    rules: List = field(default=None)
+    rules: Optional[List[Rule]] = field(default_factory=list)

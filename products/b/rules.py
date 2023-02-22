@@ -1,4 +1,4 @@
-from models.rule import rule, rules
+from models.factory import rule, rules
 
 import products.a.hosts
 import products.a.rules
