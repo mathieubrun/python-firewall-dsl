@@ -1,4 +1,6 @@
-from models.host import Host
+from models.factory import host
 
-host1 = Host("10.0.0.10")
-host2 = Host("10.0.0.11")
+import shared.hosts
+
+host1 = host("10.0.1.10", shared.hosts.special)
+host2 = host("10.0.1.11")

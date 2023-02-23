@@ -10,7 +10,8 @@ rules([
     rule(
         name="first rule",
         sources=[
-            products.a.hosts.host1
+            products.a.hosts.group1,
+            products.a.hosts.host3
         ],
         destinations=[
             products.b.hosts.host2

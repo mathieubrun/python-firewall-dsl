@@ -11,7 +11,18 @@ for f in glob("./**/rules.py", recursive=True):
     import_module(".".join(parts))
 
 for fw in shared.firewalls.fw:
-    print(f"rules for {fw.name}")
+    print(f"---- rules for {fw.name} ----")
     for r in fw.rules:
-        print(r.name)
-        print(asdict(r))
+        print(f"rule {r.name}")
+        print("  sources")
+        for s in r.sources:
+            print(f"  - {s}")
+        print("  destinations")
+        for d in r.destinations:
+            print(f"  - {d}")
+        print("  services")
+        for s in r.services:
+            print(f"  - {s}")
+    print(f"dependencies :")
+    for d in fw.dependencies():
+        print(f"- {str(d)}")

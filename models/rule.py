@@ -4,7 +4,7 @@ from typing import List
 from models.host import Host
 from models.service import Service
 
-@dataclass
+@dataclass(eq=True, frozen=True)
 class Rule:
     name: str
     sources: List[Host]

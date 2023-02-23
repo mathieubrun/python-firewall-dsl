@@ -7,3 +7,5 @@ ftp = Service(
 )
 
 ssh = Service(22, "ssh")
+
+all = Service(1, "all")
